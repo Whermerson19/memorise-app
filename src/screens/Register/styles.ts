@@ -45,7 +45,7 @@ export const Footer = styled.View`
   flex-direction: row;
 
   border-top-width: 3px;
-  border-color: ${(props) => props.theme.colors.card_background};
+  border-color: ${(props) => props.theme.colors.gray};
   border-style: solid;
 
   background-color: ${(props) => props.theme.colors.background};

@@ -15,6 +15,7 @@ import theme from "./src/global/styles/theme";
 
 import { Login } from "./src/screens/Login";
 import { Register } from "./src/screens/Register";
+import { Home } from "./src/screens/Home";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -29,10 +30,12 @@ export default function App() {
     <ThemeProvider theme={theme}>
       <StatusBar
         barStyle="light-content"
-        backgroundColor={theme.colors.background}
+        backgroundColor={theme.colors.gray}
       />
       {/* <Login /> */}
-      <Register />
+      {/* <Register /> */}
+
+      {<Home />}
     </ThemeProvider>
   );
 }

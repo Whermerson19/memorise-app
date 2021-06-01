@@ -1,5 +1,6 @@
 import React, { useRef, useCallback } from "react";
 import { useForm } from "react-hook-form";
+import { useTheme } from 'styled-components'
 
 import { Button } from "../../components/Button";
 import { InputForm } from "../../components/InputForm";
@@ -17,8 +18,12 @@ import {
   FooterButton,
   FooterButtonText,
 } from "./styles";
+import { StatusBar } from "react-native";
 
 export function Register() {
+
+  const theme = useTheme()
+
   const handleLoginFormSubmit = useCallback(() => {
     console.log("submit");
   }, []);
@@ -26,6 +31,10 @@ export function Register() {
 
   return (
     <Container>
+      <StatusBar 
+        backgroundColor={theme.colors.background}
+        barStyle="light-content"
+      />
       <LogoContainer>
         <Logo
           source={MemoriseLogo}

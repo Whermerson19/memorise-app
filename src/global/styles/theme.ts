@@ -8,7 +8,7 @@ export default {
 
     primary: "#bb86fc",
 
-    card_background: "#242424",
+    gray: "#242424",
 
     attention: "#ff0000",
 
