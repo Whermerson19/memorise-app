@@ -18,7 +18,7 @@ import {
   FooterButtonText,
 } from "./styles";
 
-export function Login() {
+export function Register() {
   const handleLoginFormSubmit = useCallback(() => {
     console.log("submit");
   }, []);
@@ -36,15 +36,23 @@ export function Login() {
           }}
         />
       </LogoContainer>
-      <Title>Login</Title>
+      <Title>Register</Title>
       <Form>
         <InputsField>
           <InputForm
-            placeholder="username / email"
+            placeholder="username"
             control={control}
-            name="loginField"
-            icon="log-in"
+            name="username"
+            icon="user"
           />
+
+          <InputForm
+            placeholder="email"
+            control={control}
+            name="email"
+            icon="mail"
+          />
+
           <InputForm
             placeholder="password"
             control={control}
@@ -53,15 +61,11 @@ export function Login() {
           />
         </InputsField>
 
-        <Button title="Login" onPress={handleSubmit(handleLoginFormSubmit)} />
+        <Button title="Register" onPress={handleSubmit(handleLoginFormSubmit)} />
       </Form>
       <Footer>
         <FooterButton>
-          <FooterButtonText>Esqueçeu a senha</FooterButtonText>
-        </FooterButton>
-
-        <FooterButton>
-          <FooterButtonText>Crie uma conta</FooterButtonText>
+          <FooterButtonText>Log In</FooterButtonText>
         </FooterButton>
       </Footer>
     </Container>

@@ -9,7 +9,7 @@ export const Container = styled.View`
   justify-content: space-between;
   align-items: center;
 
-  padding: ${RFValue(50)}px 0 0 0;
+  padding: ${RFValue(25)}px 0 0 0;
 `;
 
 export const LogoContainer = styled.View`
@@ -37,7 +37,7 @@ export const Title = styled.Text`
 export const InputsField = styled.View`
   width: 100%;
 
-  margin-bottom: ${RFValue(50)}px;
+  margin-bottom: ${RFValue(30)}px;
 `;
 
 export const Footer = styled.View`
@@ -52,7 +52,7 @@ export const Footer = styled.View`
 `;
 
 export const FooterButton = styled.TouchableOpacity`
-  width: 50%;
+  width: 100%;
 
   align-items: center;
   justify-content: center;
