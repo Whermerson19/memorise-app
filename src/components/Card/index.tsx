@@ -1,11 +1,11 @@
 import React from "react";
-import Folder from "../../assets/icons/folder.png";
+import Folder from "../../assets/icons/folder/folder.png";
+import UnknowUser from "../../assets/icons/unknow-user/unknow-user.png";
 
 import {
   Container,
   ImageContainer,
-  FolderImage,
-  UserImage,
+  Image,
   InfoContainer,
   Title,
   Subtitle,
@@ -22,7 +22,18 @@ export function Card({ type, title, subtitle, urlImage }: Props) {
   return (
     <Container>
       <ImageContainer>
-        {type === "folder" ? <FolderImage source={Folder} /> : <UserImage />}
+        {type === "folder" ? (
+          <Image source={Folder} />
+        ) : (
+          <Image
+            source={UnknowUser}
+            style={{
+              resizeMode: "contain",
+              maxWidth: "100%",
+              maxHeight: "100%",
+            }}
+          />
+        )}
       </ImageContainer>
 
       <InfoContainer>

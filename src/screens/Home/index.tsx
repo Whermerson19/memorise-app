@@ -7,6 +7,9 @@ import {
   Content,
   UserDecksContainer,
   UserFoldersContainer,
+  HeaderCards,
+  Title,
+  ViewAll,
 } from "./styles";
 
 export function Home() {
@@ -16,10 +19,22 @@ export function Home() {
 
       <Content>
         <UserDecksContainer>
+          <HeaderCards>
+            <Title>Decks</Title>
+
+            <ViewAll>view all</ViewAll>
+          </HeaderCards>
           <Card type="list" title="Title" subtitle="Subtitle" />
         </UserDecksContainer>
 
-        <UserFoldersContainer></UserFoldersContainer>
+        <UserFoldersContainer>
+          <HeaderCards>
+            <Title>Folders</Title>
+
+            <ViewAll>view all</ViewAll>
+          </HeaderCards>
+          <Card type="folder" title="Title" subtitle="Subtitle" />
+        </UserFoldersContainer>
       </Content>
     </Container>
   );

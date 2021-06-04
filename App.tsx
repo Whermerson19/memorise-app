@@ -28,10 +28,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <StatusBar
-        barStyle="light-content"
-        backgroundColor={theme.colors.gray}
-      />
+      <StatusBar barStyle="light-content" backgroundColor={theme.colors.gray} />
       {/* <Login /> */}
       {/* <Register /> */}
 
