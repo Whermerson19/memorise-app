@@ -42,8 +42,3 @@ export const Title = styled.Text`
   font-family: ${props => props.theme.fonts.medium};
 `;
 
-export const ViewAll = styled.Text`
-  color: ${props => props.theme.colors.highlight_text};
-  font-size: ${RFValue(14)}px;
-  font-family: ${props => props.theme.fonts.regular};
-`;

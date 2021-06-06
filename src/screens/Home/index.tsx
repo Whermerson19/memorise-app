@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useCallback, useState } from "react";
+import { useFocusEffect } from "@react-navigation/core";
+
 import { Card } from "../../components/Card";
 import { Header } from "../../components/Header";
+import api from "../../services/api";
 
 import {
   Container,
@@ -9,10 +12,26 @@ import {
   UserFoldersContainer,
   HeaderCards,
   Title,
-  ViewAll,
 } from "./styles";
 
+interface DecksProps {
+  id: string;
+  title: string;
+  subtitle: string;
+  user: {
+    avatarURL: string;
+  };
+}
+
 export function Home() {
+  const [decks, setDecks] = useState<DecksProps[]>([]);
+
+  const loadDecksFromApi = useCallback(async () => {
+    const response = await api.get("/decks");
+  }, []);
+
+  useFocusEffect(useCallback(() => {}, []));
+
   return (
     <Container>
       <Header title="Dashboard" lastIcon="ellipsis-vertical-outline" />
@@ -21,8 +40,6 @@ export function Home() {
         <UserDecksContainer>
           <HeaderCards>
             <Title>Decks</Title>
-
-            <ViewAll>view all</ViewAll>
           </HeaderCards>
           <Card type="list" title="Title" subtitle="Subtitle" />
         </UserDecksContainer>
@@ -30,8 +47,6 @@ export function Home() {
         <UserFoldersContainer>
           <HeaderCards>
             <Title>Folders</Title>
-
-            <ViewAll>view all</ViewAll>
           </HeaderCards>
           <Card type="folder" title="Title" subtitle="Subtitle" />
         </UserFoldersContainer>

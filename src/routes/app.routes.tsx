@@ -11,7 +11,6 @@ import { Decks } from "../screens/Decks";
 import { Folders } from "../screens/Folders";
 import { Profile } from "../screens/Profile";
 import { RFValue } from "react-native-responsive-fontsize";
-import { Platform } from "react-native";
 
 const Tab = createBottomTabNavigator();
 
@@ -36,7 +35,7 @@ export function AppRoutes() {
         <Tab.Screen
           options={{
             tabBarIcon: ({ size, color }) => (
-              <Feather size={size} color={color} name="home" />
+              <Feather size={RFValue(40)} color={color} name="home" />
             ),
           }}
           name="Home"
@@ -46,7 +45,7 @@ export function AppRoutes() {
         <Tab.Screen
           options={{
             tabBarIcon: ({ size, color }) => (
-              <Feather size={size} color={color} name="clipboard" />
+              <Feather size={RFValue(40)} color={color} name="clipboard" />
             ),
           }}
           name="Decks"
@@ -56,7 +55,7 @@ export function AppRoutes() {
         <Tab.Screen
           options={{
             tabBarIcon: ({ size, color }) => (
-              <Feather size={size} color={color} name="folder" />
+              <Feather size={RFValue(40)} color={color} name="folder" />
             ),
           }}
           name="Folders"
@@ -66,7 +65,7 @@ export function AppRoutes() {
         <Tab.Screen
           options={{
             tabBarIcon: ({ size, color }) => (
-              <Feather size={size} color={color} name="user" />
+              <Feather size={RFValue(40)} color={color} name="user" />
             ),
           }}
           name="Profile"
