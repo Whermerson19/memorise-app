@@ -15,6 +15,8 @@ import {
   Roboto_700Bold,
 } from "@expo-google-fonts/roboto";
 import { AppRoutes } from "./src/routes/app.routes";
+import { Home } from "./src/screens/Home";
+import { ApplicationRoutes } from "./src/routes/application.routes";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -28,7 +30,7 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <StatusBar barStyle="light-content" backgroundColor={theme.colors.gray} />
-      <AppRoutes />
+      <ApplicationRoutes />
     </ThemeProvider>
   );
 }

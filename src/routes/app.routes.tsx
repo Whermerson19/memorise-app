@@ -52,6 +52,8 @@ export function AppRoutes() {
           component={Decks}
         />
 
+        {/* <Feather name="plus-circle" /> */}
+
         <Tab.Screen
           options={{
             tabBarIcon: ({ size, color }) => (
